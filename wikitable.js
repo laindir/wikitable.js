@@ -8,7 +8,11 @@ function getTableName(t) {
 }
 
 function getText(node) {
-	return node.firstChild.innerText ? node.firstChild.innerText : node.firstChild.data;
+	return node.firstChild ?
+		node.firstChild.innerText ? node.firstChild.innerText
+			: node.firstChild.data
+		: node.innerText ? node.innerText
+			: node.data;
 }
 
 function getHeadRow(t) {
