@@ -39,7 +39,7 @@ An object with the following properties:
 
 ###var result = table.innerJoin(otherTable, predicate)
 
-Returns an array of merged row objects matching the supplied predicate function, of the form `function(a,b)`, where `a` is a row from table and `b` is a row from `otherTable`.
+Returns an array of merged row objects matching the supplied predicate function, of the form `function(a,b)`, where `a` is a row from `table` and `b` is a row from `otherTable`.
 
 ###result.table()
 
