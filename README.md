@@ -12,16 +12,15 @@ be able to filter them in a sane way. I hope you find it useful.
 2. Open the javascript console and paste in the contents of wikitable.js
 3. Enter a query. e.g.:
 
-
-	//on https://en.wikipedia.org/wiki/Comparison_of_lightweight_web_browsers
-	var db = getTables();
-	var result = db["Overview"]
-		.innerJoin(db["Operating system support"], function(a,b) {
-		return (/gpl/i).test(a["Software license"])
-			&& a["Browser"] == b.["Browser"]
-			&& (/yes/i).test(b["Windows"]);
-	});
-	result.table();
+		//on https://en.wikipedia.org/wiki/Comparison_of_lightweight_web_browsers
+		var db = getTables();
+		var result = db["Overview"]
+			.innerJoin(db["Operating system support"], function(a,b) {
+			return (/gpl/i).test(a["Software license"])
+				&& a["Browser"] == b.["Browser"]
+				&& (/yes/i).test(b["Windows"]);
+		});
+		result.table();
 
 ##API
 
