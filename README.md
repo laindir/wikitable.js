@@ -14,11 +14,10 @@ be able to filter them in a sane way. I hope you find it useful.
 
 		//on https://en.wikipedia.org/wiki/Comparison_of_lightweight_web_browsers
 		var db = getTables();
-		var result = db["Overview"]
-			.innerJoin(db["Operating system support"], function(a,b) {
-			return (/gpl/i).test(a["Software license"])
-				&& a["Browser"] == b.["Browser"]
-				&& (/yes/i).test(b["Windows"]);
+		var result = db["Overview"].innerJoin(db["Operating system support"], function(a,b) {
+			return ((/gpl/i).test(a["Software license"])
+				&& a["Browser"] == b["Browser"]
+				&& (/yes/i).test(b["Windows"]));
 		});
 		result.table();
 
