@@ -12,6 +12,7 @@ be able to filter them in a sane way. I hope you find it useful.
 2. Open the javascript console and paste in the contents of wikitable.js
 3. Enter a query. e.g.:
 
+
 	//on https://en.wikipedia.org/wiki/Comparison_of_lightweight_web_browsers
 	var db = getTables();
 	var result = db["Overview"]
